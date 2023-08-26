@@ -1,0 +1,202 @@
+html{
+    overflow: hidden;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif; 
+    background-color: #010207;
+    overflow: hidden; 
+}
+header{
+    background:linear-gradient(#56627a,#151723)  ;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+nav{
+    display: flex;
+    padding-top: 10px;
+    align-items: center;
+    justify-content: space-between;
+    background-color: transparent;
+}
+.containBrand{
+    width: 40%;
+}
+.brand{
+    margin-left: 20px;
+    padding: 0 90px;
+    margin-top: -8px;
+}
+nav > div > ul{
+    display: flex;
+    list-style-type: none;
+    margin-bottom: 15px;
+}
+nav > div > ul > li{
+    margin-right: 10px; 
+}
+nav > div > ul > li> a{
+    text-decoration: none;
+    padding: 5px 10px;
+    color: #00abf0;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 18px;
+    transition: .5s;
+}
+nav > div > ul > li> a:hover{
+    color: #05678d;
+}
+.fa-list{
+    color: #fff;   
+    display: none; 
+}
+/* main section */
+.mainSection{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column-reverse;
+}
+.content{
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    padding: 150px 230px;
+}
+.content .details{
+    margin-bottom: 30px;
+    font-size: 20px;
+    color: #e8e9ff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    word-spacing: 5px;
+    
+}
+.content .details h4{
+    animation: changePositionY 3s 0s 1;
+}
+.content .aboutWebsite{
+    font-family: 'Californian FB';
+    font-size: 100px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    
+}
+.content .aboutWebsite h1{
+    animation: changePositionX 5s 0s 1;
+}
+.DeepDetails{
+    max-width: 420px;
+    line-height: 30px;
+    color: #e8e9ff;
+    animation: changeOpacity 3s 0s 1;
+}
+
+/* animations */
+@keyframes changeOpacity {
+    0%{
+        opacity: 0;
+        transform: scale(1.1);
+    }50%{
+        opacity: 50%;
+        
+    }100%{
+        opacity: 100%;
+        transform: scale(1);
+    }
+}
+@keyframes changePositionX {
+    0%{
+        transform: translateX(-500px);
+    }100%{
+        transform: translateX(0);
+    }
+}
+@keyframes changePositionY {
+    0%{
+        transform: translateY(-150px);
+    }100%{
+        transform: translateY(0);
+    }
+}
+/* planet image */
+.earthPlanet{
+    position: absolute;
+    right: -20px;
+    height: 1000px;
+    width: 500px;
+    border-radius: 8px;
+    
+    overflow: hidden;
+    z-index: -1;
+}
+img{
+    animation: changeOpacity 3s 0s 1;
+
+}
+/* particles styling */
+#particles-js{
+    width: 100%;
+    
+    background-color: none;
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: -50%;
+    right: 0;
+    z-index: -1;
+}
+/* responsive website */
+@media (max-width:1023px) {
+    header nav ul{
+        flex-direction: column;
+        transition: all .5s ease-in-out;
+        margin-top: 60px;
+        align-items: center;
+        position: absolute;
+        margin-left: -40%;
+        background-color: #0c192ca2;
+        padding: 30px ;
+        text-align: center;
+        z-index: 99999;
+    }
+    header nav ul li{
+        margin-bottom: 10px;
+    }
+    .fa-list,.fa-circle-xmark{
+        position: relative;
+        font-size: 40px;
+        margin-right: 20px;
+        z-index: 9999999;
+        display: inline;
+    }
+    .content{
+        padding: 0;
+    }
+    .content .aboutWebsite{
+        font-size: 34px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    .content .details,.DeepDetails{
+        font-size: 24px;
+        max-width: 500px;
+        margin-left: 5px;
+        text-align: center;
+    }
+    .containImage{
+        margin-top: -240px;
+    }
+    .earthPlanet{
+        transform: rotate(270deg);
+        position: static;
+    }
+}
