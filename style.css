@@ -153,9 +153,7 @@ img{
 }
 /* responsive website */
 @media (max-width:1023px) {
-    html{
-        overflow-x:hidden;
-    }
+    
     header nav ul{
         flex-direction: column;
         transition: all .5s ease-in-out;
